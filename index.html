@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="header-box">
+    <div class="header-content">
+      <div class="profile-image">
+        <img src="profile.png" alt="Profile Picture">
+      </div>
+      <div class="header-text">
+        <h1>Hello, I'm Eunice Akinmade</h1>
+        <p>Web Developer | Tech Enthusiast | CPIS Senior</p>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- About Section -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>I have a strong interest in systems, networking, and coding. I enjoy working with new tools and technologies to create effective solutions and improve workflows. As a CPIS major and a tech enthusiast, I’m always excited to learn, grow, and take on new challenges in the tech field.
+
+</p>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+  <h2>My Projects</h2>
+  <div id="projects-container" class="grid-container"></div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form action="mailto:akinmadeascol2019@gmail.com" method="post" enctype="text/plain">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+  <div class="links">
+    <a href="resume.pdf" target="_blank">View My Resume</a> |
+    <a href="https://www.linkedin.com/in/kemi03/" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/kemi-lee" target="_blank">GitHub</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-box">
+    <p>&copy; <span id="year"></span> Eunice's Portfolio</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
