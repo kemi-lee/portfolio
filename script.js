@@ -100,3 +100,9 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     console.error(error);
   }
 });
+if (response.ok) {
+  form.reset();
+  const success = document.getElementById("success-message");
+  success.classList.remove("hidden");
+  success.innerText = "✅ Thank you! Your message has been sent.";
+}
