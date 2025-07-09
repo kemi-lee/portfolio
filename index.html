@@ -31,12 +31,20 @@
   </div>
 </header>
 
-<!-- About Section -->
 <section id="about">
   <h2>About Me</h2>
-  <p>I have a strong interest in systems, networking, and coding. I enjoy working with new tools and technologies to create effective solutions and improve workflows. As a CPIS major and a tech enthusiast, I’m always excited to learn, grow, and take on new challenges in the tech field.
+  <p>
+    I have a strong interest in systems, networking, and coding. I enjoy working with new tools and technologies to create effective solutions and improve workflows. As a CPIS major and a tech enthusiast, I’m always excited to learn, grow, and take on new challenges in the tech field.
+  </p>
 
-</p>
+  <div class="about-divider"></div>
+
+  <div class="goals">
+    <h3>What I’m Looking For</h3>
+    <p>
+      I’m currently seeking internship or entry-level opportunities in full-stack development, systems analysis, or IT support. I’m excited to join a collaborative team where I can contribute, grow, and continue learning!
+    </p>
+  </div>
 </section>
 
 <!-- Projects Section -->
@@ -48,7 +56,7 @@
 <!-- Contact Section -->
 <section id="contact">
   <h2>Contact Me</h2>
-  <form action="mailto:akinmadeascol2019@gmail.com" method="post" enctype="text/plain">
+  <form id="contact-form" autocomplete="off">
     <label for="name">Your Name:</label>
     <input type="text" id="name" name="name" required>
 
@@ -59,7 +67,11 @@
     <textarea id="message" name="message" rows="5" required></textarea>
 
     <button type="submit">Send Message</button>
+
+    <!-- Hidden success message -->
+    <p id="success-message" class="hidden">✅ Thank you! Your message has been sent.</p>
   </form>
+
   <div class="links">
     <a href="resume.pdf" target="_blank">View My Resume</a> |
     <a href="https://www.linkedin.com/in/kemi03/" target="_blank">LinkedIn</a> |

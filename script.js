@@ -37,6 +37,8 @@ projects.forEach(project => {
   `;
   container.appendChild(card);
 });
+
+// Animate on scroll
 document.addEventListener('DOMContentLoaded', () => {
   const elements = document.querySelectorAll('.animate-on-scroll');
 
@@ -53,5 +55,48 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.addEventListener('scroll', checkVisibility);
-  checkVisibility(); // initial check in case elements are already in view
+  checkVisibility(); // initial check
+});
+
+// Handle form submission with fetch to Formspree
+document.getElementById("contact-form").addEventListener("submit", async function(e) {
+  e.preventDefault(); // prevent default form submission
+
+  const form = e.target;
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    message: form.message.value
+  };
+
+  try {
+    const response = await fetch("https://formspree.io/f/mldnyode", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+      // Clear form
+      form.reset();
+
+      // Show success message
+      const success = document.getElementById("success-message");
+      success.classList.remove("hidden");
+      success.innerText = "✅ Thank you! Your message has been sent.";
+
+      // Hide after a few seconds
+      setTimeout(() => {
+        success.classList.add("hidden");
+      }, 6000);
+    } else {
+      alert("❌ Something went wrong. Please try again.");
+    }
+  } catch (error) {
+    alert("❌ Submission failed. Check your internet connection.");
+    console.error(error);
+  }
 });
