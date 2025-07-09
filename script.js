@@ -1,7 +1,7 @@
 // Display current year in footer
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Dynamic project data with images and links
+// Dynamic project data
 const projects = [
   {
     title: "Button Demo",
@@ -23,7 +23,7 @@ const projects = [
   }
 ];
 
-// Inject project cards dynamically
+// Inject project cards
 const container = document.getElementById("projects-container");
 
 projects.forEach(project => {
@@ -38,7 +38,7 @@ projects.forEach(project => {
   container.appendChild(card);
 });
 
-// Animate on scroll
+// Scroll animation
 document.addEventListener('DOMContentLoaded', () => {
   const elements = document.querySelectorAll('.animate-on-scroll');
 
@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     elements.forEach(el => {
       const boxTop = el.getBoundingClientRect().top;
-
       if (boxTop < triggerBottom) {
         el.classList.add('visible');
       }
@@ -58,9 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
   checkVisibility(); // initial check
 });
 
-// Handle form submission with fetch to Formspree
+// Contact form submission
 document.getElementById("contact-form").addEventListener("submit", async function(e) {
-  e.preventDefault(); // prevent default form submission
+  e.preventDefault();
 
   const form = e.target;
   const data = {
@@ -80,15 +79,12 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     });
 
     if (response.ok) {
-      // Clear form
       form.reset();
 
-      // Show success message
       const success = document.getElementById("success-message");
       success.classList.remove("hidden");
       success.innerText = "✅ Thank you! Your message has been sent.";
 
-      // Hide after a few seconds
       setTimeout(() => {
         success.classList.add("hidden");
       }, 6000);
@@ -100,9 +96,3 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     console.error(error);
   }
 });
-if (response.ok) {
-  form.reset();
-  const success = document.getElementById("success-message");
-  success.classList.remove("hidden");
-  success.innerText = "✅ Thank you! Your message has been sent.";
-}
