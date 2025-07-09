@@ -281,3 +281,62 @@ form {
   opacity: 1;
   transform: translateY(0);
 }
+.hidden {
+  display: none;
+}
+
+#success-message {
+  margin-top: 1rem;
+  padding: 10px;
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+nav {
+  position: sticky;
+  top: 0;
+  background-color: var(--plum); /* or your background */
+  z-index: 999;
+}
+
+#about {
+  background-color: var(--plum);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--lavender);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.about-divider {
+  height: 1px;
+  background-color: #ccc;
+  margin: 1.5rem 0;
+  opacity: 0.4;
+}
+
+.goals h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--lavender);
+}
+
+.goals p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
