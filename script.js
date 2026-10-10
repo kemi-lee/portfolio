@@ -9,16 +9,16 @@ const projects = [
     description: "Full-stack nutrition app with three Claude API features: a chatbot, a personalized meal plan generator, and a shopping list builder with PDF export. I led a team of five and built the database, dashboard, user authentication (hashed passwords and session handling), and Railway deployment. I'm still improving it.",
     tech: "PHP, MySQL, JavaScript, Bootstrap, Claude API",
     links: [
-      // TODO: add your Railway URL and repo, e.g. { label: "Live Site", url: "https://..." },
-      // { label: "View Code", url: "https://github.com/kemi-lee/..." }
+      { label: "Live Site", url: "https://smartplateseniors-production.up.railway.app/PHP/index.php" }
+      // TODO (optional): add your SmartPlate repo, e.g. { label: "View Code", url: "https://github.com/kemi-lee/..." }
     ]
   },
   {
     title: "SmartPlate Test Suite",
-    description: "Automated tests for SmartPlate covering signup, login, logout, dashboard access, shopping list, and the AI meal plan. It caught real bugs, including a missing login redirect that I fixed, and I documented them in a test plan and bug reports.",
+    description: "20+ end-to-end tests for SmartPlate covering signup, login, logout, dashboard access, shopping list, and the AI meal plan. It caught real bugs, including a missing login redirect that I fixed, and I documented them in a test plan and bug reports.",
     tech: "Playwright, JavaScript",
     links: [
-      // TODO: add your smartplate-tests repo, e.g. { label: "View Code", url: "https://github.com/kemi-lee/smartplate-tests" }
+      { label: "View Code", url: "https://github.com/kemi-lee/smartplate-tests" }
     ]
   },
   {
@@ -26,7 +26,7 @@ const projects = [
     description: "Desktop outfit planner built by a team of four. I built the JavaFX screens and the Firebase user authentication: signup, login, and password reset, with emails sent after signup and during account recovery. I also created the unit tests and wrote the project documentation.",
     tech: "Java, JavaFX, Firebase",
     links: [
-      // TODO: add your Stylz repo, e.g. { label: "View Code", url: "https://github.com/kemi-lee/..." }
+      { label: "View Code", url: "https://github.com/DeshanaeMorris/Outfit-Planner-Project" }
     ]
   },
   {
